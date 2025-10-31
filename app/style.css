@@ -158,27 +158,33 @@ body {
 
 .main-banner {
   background: url("assets/index-background-mobile.png") no-repeat;
-  height: 400px;
   color: white;
   padding: 27px 0 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas: "A" "B" "C" "D";
 }
 @media (min-width: 768px) {
   .main-banner {
     background: white;
     color: black;
     padding: 50px;
+    grid-template-areas: "A" "B" "D" "C";
   }
 }
 @media (min-width: 1440px) {
   .main-banner {
     background: url("assets/index-background-desktop.png") no-repeat;
     background-position: right;
-    padding-top: 200px;
+    padding-top: 240px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "A C" "B C" "D C" "E C";
   }
 }
 .main-banner__title {
   font-size: 36px;
   text-align: center;
+  grid-area: A;
 }
 @media (min-width: 768px) {
   .main-banner__title {
@@ -192,6 +198,7 @@ body {
   text-transform: uppercase;
   text-align: center;
   margin: 25px 0;
+  grid-area: B;
 }
 @media (min-width: 768px) {
   .main-banner__subTitle {
@@ -207,6 +214,7 @@ body {
   align-items: center;
   text-transform: uppercase;
   margin: 20px;
+  grid-area: D;
 }
 @media (min-width: 768px) {
   .main-banner__button {
@@ -218,6 +226,7 @@ body {
 }
 .main-banner__image {
   height: 280px;
+  grid-area: C;
 }
 @media (min-width: 768px) {
   .main-banner__image {
@@ -233,43 +242,20 @@ body {
     margin-left: -160px;
   }
 }
-
-.grid-container {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-areas: "A" "B" "C" "D";
-}
-@media (min-width: 768px) {
-  .grid-container {
-    grid-template-areas: "A" "B" "D" "C";
-  }
+.main-banner__empty {
+  grid-area: E;
+  display: none;
 }
 @media (min-width: 1440px) {
-  .grid-container {
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas: "A C" "B C" "D C" "E C";
+  .main-banner__empty {
+    display: block;
+    height: 100px;
   }
 }
 
-.g1 {
-  grid-area: A;
-}
-
-.g2 {
-  grid-area: B;
-}
-
-.g3 {
-  grid-area: C;
-}
-
-.g4 {
-  grid-area: D;
-}
-
-.g5 {
-  grid-area: E;
-  height: 100px;
+.main-programs__item {
+  background-color: #F2F2F2;
+  margin-bottom: 22px;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,6 +1,7 @@
 $primaryBgColor: #68B738;
 $mobileMainBannerColor: white;
 $desktopMainBannerColor: black;
+$basicGrey: #F2F2F2;
 
 @font-face {
   font-family: 'Oswald';
@@ -186,25 +187,43 @@ body {
 // === Main Banner ===
 .main-banner {
   background: url("assets/index-background-mobile.png") no-repeat;
-  height: 400px;
   color: $mobileMainBannerColor;
   padding: 27px 0 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "A"
+    "B"
+    "C"
+    "D";
 
   @media (min-width: 768px) {
     background: white;
     color: $desktopMainBannerColor;
     padding: 50px;
+    grid-template-areas:
+      "A"
+      "B"
+      "D"
+      "C";
   }
 
   @media (min-width: 1440px) {
     background: url("assets/index-background-desktop.png") no-repeat;
     background-position: right;
-    padding-top: 200px;
+    padding-top: 240px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "A C"
+      "B C"
+      "D C"
+      "E C";
   }
 
   &__title {
     font-size: 36px;
     text-align: center;
+    grid-area: A;
 
     @media (min-width: 768px) {
       font-size: 60px;
@@ -218,6 +237,7 @@ body {
     text-transform: uppercase;
     text-align: center;
     margin: 25px 0;
+    grid-area: B;
 
     @media (min-width: 768px) {
       font-size: 20px;
@@ -233,6 +253,7 @@ body {
     align-items: center;
     text-transform: uppercase;
     margin: 20px;
+    grid-area: D;
 
     @media (min-width: 768px) {
       font-size: 20px;
@@ -244,6 +265,7 @@ body {
 
   &__image {
     height: 280px;
+    grid-area: C;
 
     @media (min-width: 768px) {
       height: 609px;
@@ -257,54 +279,20 @@ body {
       margin-left: -160px;
     }
   }
-}
 
-// === Grid Layout ===
-.grid-container {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-areas:
-    "A"
-    "B"
-    "C"
-    "D";
-
-  @media (min-width: 768px) {
-    grid-template-areas:
-      "A"
-      "B"
-      "D"
-      "C";
-  }
-
-  @media (min-width: 1440px) {
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas:
-      "A C"
-      "B C"
-      "D C"
-      "E C";
+  &__empty {
+    grid-area: E;
+    display: none;
+    @media (min-width: 1440px) {
+      display: block;
+      height: 100px;
+    }
   }
 }
 
-// === Grid Items ===
-.g1 {
-  grid-area: A;
-}
-
-.g2 {
-  grid-area: B;
-}
-
-.g3 {
-  grid-area: C;
-}
-
-.g4 {
-  grid-area: D;
-}
-
-.g5 {
-  grid-area: E;
-  height: 100px;
+.main-programs {
+  &__item {
+    background-color: $basicGrey;
+    margin-bottom: 22px;
+  }
 }
