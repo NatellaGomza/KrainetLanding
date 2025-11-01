@@ -2,6 +2,7 @@ $primaryBgColor: #68B738;
 $mobileMainBannerColor: white;
 $desktopMainBannerColor: black;
 $basicGrey: #F2F2F2;
+$dividerColor: #D9D9D9;
 
 @font-face {
   font-family: 'Oswald';
@@ -153,6 +154,7 @@ body {
       font-weight: 500;
       color: black;
       text-decoration: none;
+
       &:hover {
         text-decoration: underline;
       }
@@ -233,7 +235,7 @@ body {
     }
   }
 
-  &__subTitle {
+  &__subtitle {
     text-transform: uppercase;
     text-align: center;
     margin: 25px 0;
@@ -291,8 +293,106 @@ body {
 }
 
 .main-programs {
+  display: flex;
+  flex-direction: column;
+  @media (min-width: 1440px) {
+    flex-direction: row;
+  }
+
   &__item {
     background-color: $basicGrey;
-    margin-bottom: 22px;
+    margin: 22px;
+    padding: 20px 20px 0;
+    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+            "E F F"
+            "G G G";
+
+    @media (min-width: 768px) {
+      padding: 80px 60px 50px 50px;
+      grid-template-areas:
+              "F F E"
+              "G G E";
+    }
+
+    @media (min-width: 1440px) {
+      flex-basis: 90%;
+      grid-template-areas:
+            "E F F"
+            "G G G";
+    }
+  }
+
+  &__image-wrapper {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: visible;
+    background-color: $primaryBgColor;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: E;
+
+    svg {
+      width: 100%;
+    }
+
+    @media (min-width: 768px) {
+      width: 200px;
+      height: 200px;
+    }
+
+    @media (min-width: 1440px) {
+      width: 100px;
+      height: 100px;
+    }
+  }
+
+  &__title {
+    text-transform: uppercase;
+    grid-area: F;
+    font-size: 24px;
+
+    @media (min-width: 768px) {
+      font-size: 30px;
+    }
+  }
+
+  &__content {
+    padding: 20px;
+    grid-area: G;
+
+    @media (min-width: 768px) {
+      padding: 20px 90px 0 0;
+      font-size: 16px;
+    }
+  }
+
+  &__divider {
+    border: 1px solid $dividerColor;
+    margin: 15px 0;
+
+    @media (min-width: 768px) {
+      display: none;
+    }
+  }
+
+  &__button {
+    @media (min-width: 768px) {
+      margin-top: 30px;
+    }
+
+    > span {
+      text-transform: uppercase;
+      margin-right: 15px;
+      font-size: 16px;
+
+      @media (min-width: 768px) {
+        font-size: 20px;
+      }
+    }
   }
 }

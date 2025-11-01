@@ -194,14 +194,14 @@ body {
     line-height: 60px;
   }
 }
-.main-banner__subTitle {
+.main-banner__subtitle {
   text-transform: uppercase;
   text-align: center;
   margin: 25px 0;
   grid-area: B;
 }
 @media (min-width: 768px) {
-  .main-banner__subTitle {
+  .main-banner__subtitle {
     font-size: 20px;
     text-align: left;
   }
@@ -253,9 +253,105 @@ body {
   }
 }
 
+.main-programs {
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 1440px) {
+  .main-programs {
+    flex-direction: row;
+  }
+}
 .main-programs__item {
   background-color: #F2F2F2;
-  margin-bottom: 22px;
+  margin: 22px;
+  padding: 20px 20px 0;
+  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas: "E F F" "G G G";
+}
+@media (min-width: 768px) {
+  .main-programs__item {
+    padding: 80px 60px 50px 50px;
+    grid-template-areas: "F F E" "G G E";
+  }
+}
+@media (min-width: 1440px) {
+  .main-programs__item {
+    flex-basis: 90%;
+    grid-template-areas: "E F F" "G G G";
+  }
+}
+.main-programs__image-wrapper {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  overflow: visible;
+  background-color: #68B738;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-area: E;
+}
+.main-programs__image-wrapper svg {
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .main-programs__image-wrapper {
+    width: 200px;
+    height: 200px;
+  }
+}
+@media (min-width: 1440px) {
+  .main-programs__image-wrapper {
+    width: 100px;
+    height: 100px;
+  }
+}
+.main-programs__title {
+  text-transform: uppercase;
+  grid-area: F;
+  font-size: 24px;
+}
+@media (min-width: 768px) {
+  .main-programs__title {
+    font-size: 30px;
+  }
+}
+.main-programs__content {
+  padding: 20px;
+  grid-area: G;
+}
+@media (min-width: 768px) {
+  .main-programs__content {
+    padding: 20px 90px 0 0;
+    font-size: 16px;
+  }
+}
+.main-programs__divider {
+  border: 1px solid #D9D9D9;
+  margin: 15px 0;
+}
+@media (min-width: 768px) {
+  .main-programs__divider {
+    display: none;
+  }
+}
+@media (min-width: 768px) {
+  .main-programs__button {
+    margin-top: 30px;
+  }
+}
+.main-programs__button > span {
+  text-transform: uppercase;
+  margin-right: 15px;
+  font-size: 16px;
+}
+@media (min-width: 768px) {
+  .main-programs__button > span {
+    font-size: 20px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
