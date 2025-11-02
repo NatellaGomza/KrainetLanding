@@ -3,6 +3,8 @@
 @use 'base/reset';
 @use 'layout/header';
 @use 'layout/nav';
+@use 'layout/main-banner';
+@use 'layout/main-overview';
 
 body {
   width: 320px;

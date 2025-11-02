@@ -1,5 +1,5 @@
-import { slimCat } from '../svg/slimCat.js';
-import { proCat } from '../svg/proCat.js';
+import { slimCat } from '../svg/programs/slimCat.js';
+import { proCat } from '../svg/programs/proCat.js';
 import {iconArrow} from '../svg/iconArr.js';
 
 const programs = [

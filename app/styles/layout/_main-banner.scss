@@ -1,4 +1,5 @@
 @use '../base/variables';
+@use '../base/mixins';
 // === Main Banner ===
 .main-banner {
   background: url("../../assets/index-background-mobile.png") no-repeat;
@@ -36,7 +37,7 @@
   }
 
   &__title {
-    font-size: 36px;
+    font-size: variables.$mobTitleFontSize;
     text-align: center;
     grid-area: A;
 
@@ -61,11 +62,9 @@
   }
 
   &__button {
+    @include mixins.flex-center;
     background-color: variables.$primaryBgColor;
     padding: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     text-transform: uppercase;
     margin: 20px;
     grid-area: D;
@@ -107,15 +106,15 @@
 
 .main-programs {
   display: flex;
-  flex-direction: column;
-  @media (min-width: 1440px) {
-    flex-direction: row;
-  }
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
 
   &__item {
     background-color: variables.$basicGrey;
     margin: 22px;
     padding: 20px 20px 0;
+    flex-basis: 100%;
     align-items: center;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -131,7 +130,8 @@
     }
 
     @media (min-width: 1440px) {
-      flex-basis: 90%;
+      flex-basis: 48%;
+      margin: 22px 0;
       grid-template-areas:
             "E F F"
             "G G G";
@@ -139,14 +139,12 @@
   }
 
   &__image-wrapper {
+    @include mixins.flex-center;
     width: 50px;
     height: 50px;
     border-radius: 50%;
     overflow: visible;
     background-color: variables.$primaryBgColor;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     grid-area: E;
 
     svg {

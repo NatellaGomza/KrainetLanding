@@ -1,0 +1,102 @@
+@use '../base/variables';
+@use '../base/mixins';
+@use '../base/fonts';
+
+.main-overview {
+  margin: 0 20px 20px;
+
+  .break-line::before {
+    @media (min-width: 768px) {
+      content: "\A";
+      white-space: pre-line;
+    }
+  }
+
+  &__title {
+    font-size: variables.$mobTitleFontSize;
+    margin-bottom: 30px;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    @media (min-width: 768px) {
+      width: 99%;
+      align-items: flex-start;
+      margin: 0 10px 20px 0;
+    }
+
+    @media (min-width: 1440px) {
+      width: 99%;
+    }
+  }
+
+  &__item {
+    display: flex;
+    margin-bottom: 20px;
+    flex-basis: 100%;
+    position: relative;
+    align-items: center;
+
+    @media (min-width: 768px) {
+      flex-basis: 34%;
+      justify-content: flex-end;
+    }
+
+    @media (min-width: 1440px) {
+      flex-basis: 18%;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+    @media (min-width: 768px) {
+      position: absolute;
+      flex-direction: column;
+      align-items: flex-start;
+      left: 0;
+      top: 40px;
+    }
+  }
+
+  &__image {
+    @include mixins.flex-center;
+    min-width: 60px;
+    height: 60px;
+    background-color: variables.$primaryBgColor;
+
+    @media (min-width: 768px) {
+      width: 80px;
+      height: 80px;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__content-text {
+    font-family: fonts.$font-secondary;
+    margin-left: 20px;
+
+    @media (min-width: 768px) {
+      margin-left: 0;
+      font-size: 16px;
+    }
+  }
+
+  &__number {
+    display: none;
+    font-size: 280px;
+    line-height: 280px;
+    color: variables.$basicGrey;
+
+    @media (min-width: 768px) {
+      display: block;
+    }
+  }
+}
