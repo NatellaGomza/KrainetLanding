@@ -1,0 +1,211 @@
+@use '../base/variables';
+// === Main Banner ===
+.main-banner {
+  background: url("../../assets/index-background-mobile.png") no-repeat;
+  color: variables.$mobileMainBannerColor;
+  padding: 27px 0 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "A"
+    "B"
+    "C"
+    "D";
+
+  @media (min-width: 768px) {
+    background: white;
+    color: variables.$desktopMainBannerColor;
+    padding: 50px;
+    grid-template-areas:
+      "A"
+      "B"
+      "D"
+      "C";
+  }
+
+  @media (min-width: 1440px) {
+    background: url("../../assets/index-background-desktop.png") no-repeat;
+    background-position: right;
+    padding-top: 240px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "A C"
+      "B C"
+      "D C"
+      "E C";
+  }
+
+  &__title {
+    font-size: 36px;
+    text-align: center;
+    grid-area: A;
+
+    @media (min-width: 768px) {
+      font-size: 60px;
+      text-align: left;
+      padding-right: 60px;
+      line-height: 60px;
+    }
+  }
+
+  &__subtitle {
+    text-transform: uppercase;
+    text-align: center;
+    margin: 25px 0;
+    grid-area: B;
+
+    @media (min-width: 768px) {
+      font-size: 20px;
+      text-align: left;
+    }
+  }
+
+  &__button {
+    background-color: variables.$primaryBgColor;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    margin: 20px;
+    grid-area: D;
+
+    @media (min-width: 768px) {
+      font-size: 20px;
+      color: white;
+      width: 244px;
+      margin: 20px 0;
+    }
+  }
+
+  &__image {
+    height: 280px;
+    grid-area: C;
+
+    @media (min-width: 768px) {
+      height: 609px;
+      margin-top: -100px;
+      margin-left: -30px;
+    }
+
+    @media (min-width: 1440px) {
+      height: 499px;
+      margin-top: -100px;
+      margin-left: -160px;
+    }
+  }
+
+  &__empty {
+    grid-area: E;
+    display: none;
+    @media (min-width: 1440px) {
+      display: block;
+      height: 100px;
+    }
+  }
+}
+
+.main-programs {
+  display: flex;
+  flex-direction: column;
+  @media (min-width: 1440px) {
+    flex-direction: row;
+  }
+
+  &__item {
+    background-color: variables.$basicGrey;
+    margin: 22px;
+    padding: 20px 20px 0;
+    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+            "E F F"
+            "G G G";
+
+    @media (min-width: 768px) {
+      padding: 80px 60px 50px 50px;
+      grid-template-areas:
+              "F F E"
+              "G G E";
+    }
+
+    @media (min-width: 1440px) {
+      flex-basis: 90%;
+      grid-template-areas:
+            "E F F"
+            "G G G";
+    }
+  }
+
+  &__image-wrapper {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: visible;
+    background-color: variables.$primaryBgColor;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: E;
+
+    svg {
+      width: 100%;
+    }
+
+    @media (min-width: 768px) {
+      width: 200px;
+      height: 200px;
+    }
+
+    @media (min-width: 1440px) {
+      width: 100px;
+      height: 100px;
+    }
+  }
+
+  &__title {
+    text-transform: uppercase;
+    grid-area: F;
+    font-size: 24px;
+
+    @media (min-width: 768px) {
+      font-size: 30px;
+    }
+  }
+
+  &__content {
+    padding: 20px;
+    grid-area: G;
+
+    @media (min-width: 768px) {
+      padding: 20px 90px 0 0;
+      font-size: 16px;
+    }
+  }
+
+  &__divider {
+    border: 1px solid variables.$dividerColor;
+    margin: 15px 0;
+
+    @media (min-width: 768px) {
+      display: none;
+    }
+  }
+
+  &__button {
+    @media (min-width: 768px) {
+      margin-top: 30px;
+    }
+
+    > span {
+      text-transform: uppercase;
+      margin-right: 15px;
+      font-size: 16px;
+
+      @media (min-width: 768px) {
+        font-size: 20px;
+      }
+    }
+  }
+}

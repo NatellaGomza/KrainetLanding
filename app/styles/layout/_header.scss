@@ -1,0 +1,31 @@
+// === Header ===
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  color: white;
+
+  &.scrolled {
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+
+  @media (min-width: 1440px) {
+    position: fixed;
+    margin: 0 auto;
+    width: 1440px;
+    transition: background-color 0.3s ease;
+    background-color: transparent;
+    z-index: 1000;
+  }
+
+  &__logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+
+  &__nav {
+    position: relative;
+  }
+}
