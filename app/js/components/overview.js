@@ -31,15 +31,17 @@ export function renderOverview(color) {
 
     items.forEach((item, index) => {
         const card = document.createElement("div");
-        card.className = "main-overview__item";
+        card.className = "main-overview__item-wrapper";
 
         card.innerHTML = `
+<div class="main-overview__item">
 <div class="main-overview__number" style="margin-right: ${item.marginRight}">${index+1}</div>
 <div class="main-overview__wrapper">
       <div class="main-overview__image">
         ${item.image(color)}
       </div>
       <p class="main-overview__content-text">${item.content}</p>
+      </div>
       </div>
     `;
 
