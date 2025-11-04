@@ -2,6 +2,7 @@ import {initBurgerMenu} from './components/burgerMenu.js';
 import {renderPrograms} from "./components/programs.js";
 import {renderOverview} from "./components/overview.js";
 import {renderExample} from "./components/example.js";
+import {renderMap} from "./components/address.js";
 
 const primaryColor = 'black';
 
@@ -9,6 +10,7 @@ initBurgerMenu();
 renderPrograms(primaryColor);
 renderOverview();
 renderExample();
+renderMap();
 
 const header = document.querySelector('.header');
 const headerLink = document.querySelectorAll('.nav__link');

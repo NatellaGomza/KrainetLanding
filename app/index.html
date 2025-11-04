@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Cat Energy</title>
     <link rel="stylesheet" href="styles/main.css">
+
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=e6103488-27a6-40e5-8527-ad3a7d4faf1f&lang=ru_RU" type="text/javascript"></script>
+    <script type="module" src="./js/main.js"></script>
 </head>
 <body>
 <header class="header">
@@ -55,13 +58,25 @@
                     </div>
                 </div>
             </div>
-            <div class="main-example__image">
-                <img src="assets/before-mobile%201.png" alt="">
+            <div class="main-example__slider">
+                <div class="slider-container">
+                    <div class="image-wrapper">
+                        <img src="./assets/before.jpg" class="before-img"/>
+                        <img src="./assets/after.jpg" class="after-img" id="afterImg"/>
+                        <div class="overlay" id="overlay"></div>
+                    </div>
+                    <input type="range" min="0" max="100" value="50" id="slider"/>
+                </div>
             </div>
         </div>
     </section>
-</main>
+    <section id="address">
+        <div id="map">
+        </div>
+    </section>
+<!--    <script src="https://api-maps.yandex.ru/2.1/?apikey=e6103488-27a6-40e5-8527-ad3a7d4faf1f&lang=ru_RU" type="text/javascript"></script>-->
+<!--    <script type="module" src="./js/main.js"></script>-->
 
-<script type="module" src="./js/main.js"></script>
+</main>
 </body>
 </html>
