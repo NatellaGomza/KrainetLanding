@@ -12,9 +12,7 @@
 </head>
 <body>
 <header class="header">
-    <div class="header__logo">
-        <img src="assets/logo-mobile.png" alt=""/>
-        <img src="assets/logo 2.png" alt=""/>
+    <div class="header__logo" id="header-logo">
     </div>
     <nav class="header__nav">
         <button class="nav__burger" aria-label="Открыть меню">
@@ -34,7 +32,6 @@
         <p class="main-banner__subtitle">Занялся собой? Займись котом!</p>
         <img class='main-banner__image' src="assets/index-can.png" alt=""/>
         <div class='main-banner__button'>Подобрать программу</div>
-        <div class='main-banner__empty'></div>
     </section>
     <section id="programs" class="main-programs">
     </section>
@@ -63,7 +60,8 @@
                 <div class="main-example__slider-container">
                     <div class="main-example__image-wrapper">
                         <img src="./assets/before.jpg" class="main-example__image main-example__image--before"/>
-                        <img src="./assets/after.jpg" class="main-example__image main-example__image--after" id="afterImg"/>
+                        <img src="./assets/after.jpg" class="main-example__image main-example__image--after"
+                             id="afterImg"/>
                         <div class="main-example__overlay" id="overlay"></div>
                     </div>
                     <input type="range" min="0" max="100" value="50" class="main-example__slider-input" id="slider"/>
@@ -71,9 +69,17 @@
             </div>
         </div>
     </section>
-    <section id="address">
+    <section id="address" class="main-address">
+        <div class="main-address__content">
+            <p class="main-address__text--highlight">Приглашаем к сотрудничеству дилеров</p>
+            <p class="main-address__text--street">ул. Большая</p>
+            <p class="main-address__text--building">Конюшенная, д. 19/8 </p>
+            <p class="main-address__text--city">Санкт-Петербург</p>
+        </div>
         <div id="map">
         </div>
+    </section>
+    <section id="footer" class="main-footer">
     </section>
 </main>
 </body>

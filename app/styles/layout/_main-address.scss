@@ -1,3 +1,67 @@
+@use '../base/variables';
+@use '../base/mixins';
+@use '../base/fonts';
+
 #map {
   height: 500px;
+}
+
+.main-address {
+  margin: 0 20px 20px;
+  position: relative;
+
+  &__content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "K L" "K M" "K N";
+    font-size: 14px;
+    color: #444444;
+    font-family: fonts.$font-secondary;
+    @media (min-width: 768px) {
+      margin: 20px 50px;
+      font-size: 16px;
+      text-align: end;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr;
+      grid-template-areas: "K empty empty L" "K empty empty M" "K empty empty space" "K empty empty N";
+    }
+    @media (min-width: 1440px) {
+      position: absolute;
+      z-index: 20;
+      top: 95px;
+      left: 110px;
+      background-color: white;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr;
+      grid-template-areas: "K L" "K M" "K N";
+      width: 570px;
+      padding: 50px 70px;
+    }
+  }
+
+  &__text {
+    &--street {
+      grid-area: L;
+    }
+
+    &--building {
+      grid-area: M;
+    }
+
+    &--city {
+      grid-area: N;
+    }
+  }
+
+  &__text--highlight {
+    font-size: 16px;
+    font-family: fonts.$font-main;
+    text-transform: uppercase;
+    grid-area: K;
+    text-align: start;
+
+    @media (min-width: 768px) {
+      font-size: 20px;
+    }
+  }
 }

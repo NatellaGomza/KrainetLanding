@@ -17,7 +17,7 @@ export function renderMap() {
             { hintContent: "Моя точка" },
             {
                 iconLayout: "default#image",
-                iconImageHref: "../../assets/map-logo.png", // замените на реальный путь
+                iconImageHref: "../../assets/map-logo.png",
                 iconImageSize: [48, 48],
                 iconImageOffset: [-24, -48]
             }

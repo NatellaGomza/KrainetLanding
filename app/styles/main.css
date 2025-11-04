@@ -39,9 +39,15 @@
   }
 }
 .header__logo {
-  font-size: 1.5rem;
-  font-weight: bold;
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @media (min-width: 768px) {
+        width: fit-content;
+    }
 }
+
 .header__nav {
   position: relative;
 }
@@ -238,16 +244,6 @@
     height: 499px;
     margin-top: -100px;
     margin-left: -160px;
-  }
-}
-.main-banner__empty {
-  grid-area: E;
-  display: none;
-}
-@media (min-width: 1440px) {
-  .main-banner__empty {
-    display: block;
-    height: 100px;
   }
 }
 
@@ -586,6 +582,9 @@
     font-size: 16px;
   }
 }
+.main-example__slider {
+  display: none;
+}
 @media (min-width: 1440px) {
   .main-example__slider {
     flex-basis: 60%;
@@ -662,6 +661,64 @@
 
 #map {
   height: 500px;
+}
+
+.main-address {
+  margin: 0 20px 20px;
+  position: relative;
+}
+.main-address__content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "K L" "K M" "K N";
+  font-size: 14px;
+  color: #444444;
+  font-family: "Arial", sans-serif;
+}
+@media (min-width: 768px) {
+  .main-address__content {
+    margin: 20px 50px;
+    font-size: 16px;
+    text-align: end;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas: "K empty empty L" "K empty empty M" "K empty empty space" "K empty empty N";
+  }
+}
+@media (min-width: 1440px) {
+  .main-address__content {
+    position: absolute;
+    z-index: 20;
+    top: 95px;
+    left: 110px;
+    background-color: white;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas: "K L" "K M" "K N";
+    width: 570px;
+    padding: 50px 70px;
+  }
+}
+.main-address__text--street {
+  grid-area: L;
+}
+.main-address__text--building {
+  grid-area: M;
+}
+.main-address__text--city {
+  grid-area: N;
+}
+.main-address__text--highlight {
+  font-size: 16px;
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+  grid-area: K;
+  text-align: start;
+}
+@media (min-width: 768px) {
+  .main-address__text--highlight {
+    font-size: 20px;
+  }
 }
 
 body {

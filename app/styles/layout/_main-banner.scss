@@ -93,15 +93,6 @@
       margin-left: -160px;
     }
   }
-
-  &__empty {
-    grid-area: E;
-    display: none;
-    @media (min-width: 1440px) {
-      display: block;
-      height: 100px;
-    }
-  }
 }
 
 .main-programs {
