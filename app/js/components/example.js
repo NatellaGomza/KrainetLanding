@@ -1,4 +1,3 @@
-// 1. Данные для карточек (вынесены для чистоты)
 const items = [
     {
         title: '5 кг',
@@ -11,50 +10,55 @@ const items = [
 ];
 
 function initializeSlider() {
-    const slider = document.querySelector("#slider");
-    const afterImg = document.querySelector(".after-img");
-    const overlay = document.querySelector("#overlay");
-    const imageWrapper = document.querySelector(".image-wrapper");
+    const slider = document.querySelector(".main-example__slider-input");
+    const afterImg = document.querySelector(".main-example__image--after");
+    const overlay = document.querySelector(".main-example__overlay");
+    const imageWrapper = document.querySelector(".main-example__image-wrapper");
+
     if (!slider || !afterImg || !overlay || !imageWrapper) return;
 
     const min = Number(slider.min) || 0;
     const max = Number(slider.max) || 100;
-
-    // Точная ширина thumb, соответствующая CSS (width + визуальный box-shadow не влияет)
-    const THUMB_WIDTH = 34; // если меняешь CSS thumb.width — поменяй тут
+    const THUMB_WIDTH = 34; // соответствие CSS
 
     function updateVisuals() {
         const value = Number(slider.value);
-        const ratio = (value - min) / (max - min); // 0..1
+        const ratio = (value - min) / (max - min); // от 0 до 1
 
         const sliderRect = slider.getBoundingClientRect();
         const imgRect = imageWrapper.getBoundingClientRect();
 
-        // usable ширина, по которой действительно движется центр thumb
         const usableWidth = Math.max(0, sliderRect.width - THUMB_WIDTH);
-
-        // центр thumb в координатах окна
         const thumbCenterX = sliderRect.left + ratio * usableWidth + THUMB_WIDTH / 2;
 
-        // центр относительно imageWrapper
-        let relativeX = thumbCenterX - imgRect.left;
+        const relativeX = thumbCenterX - imgRect.left;
         const clampedX = Math.max(0, Math.min(relativeX, imgRect.width));
 
-        // ставим overlay и clip-path
         overlay.style.left = `${clampedX}px`;
-        afterImg.style.clipPath = `inset(0 ${100 - (clampedX / imgRect.width) * 100}% 0 0)`;
+
+        const clipPercent = imgRect.width > 0
+            ? (clampedX / imgRect.width) * 100
+            : 50;
+
+        afterImg.style.clipPath = `inset(0 ${100 - clipPercent}% 0 0)`;
     }
 
     slider.addEventListener("input", updateVisuals);
     window.addEventListener("resize", updateVisuals);
-    updateVisuals();
+
+    const images = imageWrapper.querySelectorAll("img");
+    let loaded = 0;
+    images.forEach((img) => {
+        if (img.complete) loaded++;
+        else img.addEventListener("load", () => {
+            loaded++;
+            if (loaded === images.length) updateVisuals();
+        });
+    });
+
+    if (loaded === images.length) updateVisuals();
 }
 
-
-
-/**
- * Рендерит карточки достижений в указанный контейнер.
- */
 function renderAchievementCards() {
     const exampleSection = document.querySelector(".main-example__achievement-group");
 
@@ -63,14 +67,10 @@ function renderAchievementCards() {
         return;
     }
 
-    // Очищаем контейнер перед рендерингом (если нужно предотвратить дублирование при повторном вызове)
-    // exampleSection.innerHTML = '';
-
     items.forEach((item) => {
         const cardWrapper = document.createElement("div");
         cardWrapper.className = "main-example__achievement-card-wrapper";
 
-        // Используем темплейт-литералы для чистоты
         cardWrapper.innerHTML = `
             <div class="main-example__achievement-card-border"></div>
             <div class="main-example__achievement-card">
@@ -83,15 +83,8 @@ function renderAchievementCards() {
     });
 }
 
-
-/**
- * Основная функция инициализации всего раздела примера.
- * Это ваша новая функция renderExample, которая вызывает обе части.
- */
 export function renderExample() {
     initializeSlider();
     renderAchievementCards();
 }
 
-// Пример использования (если вы не используете модули или хотите запустить сразу)
-// document.addEventListener('DOMContentLoaded', renderExample);

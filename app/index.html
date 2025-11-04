@@ -6,7 +6,8 @@
     <title>Cat Energy</title>
     <link rel="stylesheet" href="styles/main.css">
 
-    <script src="https://api-maps.yandex.ru/2.1/?apikey=e6103488-27a6-40e5-8527-ad3a7d4faf1f&lang=ru_RU" type="text/javascript"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=e6103488-27a6-40e5-8527-ad3a7d4faf1f&lang=ru_RU"
+            type="text/javascript"></script>
     <script type="module" src="./js/main.js"></script>
 </head>
 <body>
@@ -59,13 +60,13 @@
                 </div>
             </div>
             <div class="main-example__slider">
-                <div class="slider-container">
-                    <div class="image-wrapper">
-                        <img src="./assets/before.jpg" class="before-img"/>
-                        <img src="./assets/after.jpg" class="after-img" id="afterImg"/>
-                        <div class="overlay" id="overlay"></div>
+                <div class="main-example__slider-container">
+                    <div class="main-example__image-wrapper">
+                        <img src="./assets/before.jpg" class="main-example__image main-example__image--before"/>
+                        <img src="./assets/after.jpg" class="main-example__image main-example__image--after" id="afterImg"/>
+                        <div class="main-example__overlay" id="overlay"></div>
                     </div>
-                    <input type="range" min="0" max="100" value="50" id="slider"/>
+                    <input type="range" min="0" max="100" value="50" class="main-example__slider-input" id="slider"/>
                 </div>
             </div>
         </div>
@@ -74,9 +75,6 @@
         <div id="map">
         </div>
     </section>
-<!--    <script src="https://api-maps.yandex.ru/2.1/?apikey=e6103488-27a6-40e5-8527-ad3a7d4faf1f&lang=ru_RU" type="text/javascript"></script>-->
-<!--    <script type="module" src="./js/main.js"></script>-->
-
 </main>
 </body>
 </html>
