@@ -7,7 +7,7 @@
 }
 
 .main-footer {
-  margin: 20px;
+  margin: 50px 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -19,11 +19,14 @@
     flex-direction: row;
     justify-content: space-between;
   }
+  @media (min-width: 1440px) {
+    padding: 0 variables.$sectionPadding;
+  }
 
   &__divider {
+    @include mixins.main-divider;
     margin: 20px auto;
-    border: 1px solid variables.$dividerColor;
-    width: 100%;
+
     @media (min-width: 768px) {
       display: none;
     }
@@ -45,6 +48,7 @@
     span:first-of-type {
       margin-right: 20px;
     }
+
     @media (min-width: 768px) {
       width: fit-content;
     }

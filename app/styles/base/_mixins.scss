@@ -1,5 +1,12 @@
+@use '../base/variables';
+
 @mixin flex-center {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@mixin main-divider {
+  width: 100%;
+  border-bottom: 1px solid variables.$dividerColor;
 }

@@ -1,0 +1,121 @@
+@use '../base/variables';
+@use '../base/mixins';
+@use '../base/fonts';
+// === Main Programs ===
+
+.main-programs {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  @media (min-width: 1440px) {
+    padding: 0 variables.$sectionPadding;
+  }
+
+  &__item {
+    background-color: variables.$basicGrey;
+    margin: 22px;
+    padding: 20px 20px 0;
+    flex-basis: 100%;
+    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+            "E F F"
+            "G G G";
+
+    @media (min-width: 768px) {
+      padding: 80px 60px 50px 50px;
+      grid-template-areas:
+              "F F E"
+              "G G E";
+    }
+
+    @media (min-width: 1440px) {
+      flex-basis: 48%;
+      margin: 22px 0;
+      grid-template-areas:
+            "E F F"
+            "G G G";
+    }
+  }
+
+  &__image-wrapper {
+    @include mixins.flex-center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: visible;
+    background-color: variables.$primaryBgColor;
+    grid-area: E;
+
+    svg {
+      width: 100%;
+    }
+
+    @media (min-width: 768px) {
+      width: 200px;
+      height: 200px;
+    }
+
+    @media (min-width: 1440px) {
+      width: 100px;
+      height: 100px;
+    }
+  }
+
+  &__title {
+    text-transform: uppercase;
+    grid-area: F;
+    font-size: 24px;
+
+    @media (min-width: 768px) {
+      font-size: 30px;
+    }
+  }
+
+  &__subtitle {
+    font-family: fonts.$font-secondary;
+  }
+
+  &__content {
+    padding: 20px 0;
+    grid-area: G;
+
+    @media (min-width: 768px) {
+      padding: 20px 50px 0 0;
+      font-size: 16px;
+    }
+
+    @media (min-width: 1440px) {
+      padding: 20px 0 0;
+      font-size: 16px;
+    }
+  }
+
+  &__divider {
+    @include mixins.main-divider;
+    margin: 15px 0;
+
+    @media (min-width: 768px) {
+      display: none;
+    }
+  }
+
+  &__button {
+    @media (min-width: 768px) {
+      margin-top: 30px;
+    }
+
+    > span {
+      text-transform: uppercase;
+      margin-right: 15px;
+      font-size: 16px;
+
+      @media (min-width: 768px) {
+        font-size: 20px;
+      }
+    }
+  }
+}

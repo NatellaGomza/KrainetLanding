@@ -1,23 +1,34 @@
-// === Header ===
+@use '../base/variables';
+@use '../base/mixins';
+@use '../base/fonts';
 
+// === Header ===
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px;
+  padding: 20px;
   color: white;
+  position: fixed;
+  margin: 0 auto;
+  z-index: 1000;
+  width: 320px;
+  background-color: white;
 
   &.scrolled {
     background-color: rgba(255, 255, 255, 0.8);
   }
 
-  @media (min-width: 1440px) {
-    position: fixed;
-    margin: 0 auto;
-    width: 1440px;
+  @media (min-width: 768px) {
+    width: 768px;
+    padding: 30px;
     transition: background-color 0.3s ease;
     background-color: transparent;
-    z-index: 1000;
+  }
+
+  @media (min-width: 1440px) {
+    width: 1440px;
+    padding: 50px variables.$sectionPadding 20px;
   }
 
   &__logo {

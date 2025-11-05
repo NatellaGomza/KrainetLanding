@@ -5,6 +5,10 @@
 .main-example {
   margin: 0 20px 20px;
 
+  @media (min-width: 1440px) {
+    padding: 0 variables.$sectionPadding;
+  }
+
   &__content {
     @media (min-width: 1440px) {
       display: flex;
@@ -22,7 +26,7 @@
 
   &__info {
     @media (min-width: 1440px) {
-      flex-basis: 40%;
+      flex-basis: 31%;
     }
   }
 
@@ -34,6 +38,10 @@
       font-size: 16px;
       padding: 0 55px 25px 0;
     }
+
+    @media (min-width: 1440px) {
+      padding: 100px 10px 70px
+    }
   }
 
   &__achievement-wrapper {
@@ -44,6 +52,7 @@
 
     @media (min-width: 1440px) {
       flex-direction: column;
+      width: 90%;
     }
   }
 
@@ -68,7 +77,7 @@
   }
 
   &__achievement-card-border {
-    border-radius: 16px;
+    border-radius: 4px;
     border: 1px solid #CDCDCD;
     padding: 27px 0;
 
@@ -120,6 +129,12 @@
       text-align: right;
       font-size: 16px;
     }
+
+    @media (min-width: 1440px) {
+      display: flex;
+      justify-content: space-between;
+      font-size: 20px;
+    }
   }
 
   &__slider {
@@ -129,6 +144,7 @@
   }
 
   &__slider-container {
+    display: none;
     width: 600px;
     margin: 0 auto;
   }

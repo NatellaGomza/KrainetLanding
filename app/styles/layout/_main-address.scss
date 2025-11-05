@@ -7,7 +7,6 @@
 }
 
 .main-address {
-  margin: 0 20px 20px;
   position: relative;
 
   &__content {
@@ -17,6 +16,7 @@
     font-size: 14px;
     color: #444444;
     font-family: fonts.$font-secondary;
+    margin: 20px;
     @media (min-width: 768px) {
       margin: 20px 50px;
       font-size: 16px;
@@ -28,8 +28,8 @@
     @media (min-width: 1440px) {
       position: absolute;
       z-index: 20;
-      top: 95px;
-      left: 110px;
+      top: 70px;
+      left: 70px;
       background-color: white;
       grid-template-columns: 1fr 1fr;
       grid-template-rows: 1fr 1fr 1fr 1fr;
