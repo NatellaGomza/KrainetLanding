@@ -166,7 +166,7 @@
 }
 
 .main-banner {
-  background: url("../../../app/assets/index-background-mobile.png") no-repeat;
+  background: url("./../assets/index-background-mobile.png") no-repeat;
   color: white;
   padding: 27px 0 0;
   display: grid;
@@ -183,8 +183,7 @@
 }
 @media (width >= 1440px) {
   .main-banner {
-    background: url("./../../../app/assets/index-background-desktop.png") no-repeat;
-    background-position: right;
+    background: url("./../assets/index-background-desktop.png") no-repeat right;
     padding-top: 140px;
     padding-left: calc(50px + 110px);
     grid-template-columns: 1fr 1fr 275px;

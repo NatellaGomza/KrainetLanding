@@ -4,7 +4,7 @@
 
 // === Main Banner ===
 .main-banner {
-  background: url("../../../app/assets/index-background-mobile.png") no-repeat;
+  background: url("#{variables.$assets-path}/index-background-mobile.png") no-repeat;
   color: variables.$mobileMainBannerColor;
   padding: 27px 0 0;
   display: grid;
@@ -27,8 +27,7 @@
   }
 
   @media (width >= 1440px) {
-    background: url("./../../../app/assets/index-background-desktop.png") no-repeat;
-    background-position: right;
+    background: url("#{variables.$assets-path}/index-background-desktop.png") no-repeat right;
     padding-top: 140px;
     padding-left: calc(50px + #{variables.$sectionPadding});
     grid-template-columns: 1fr 1fr 275px;
