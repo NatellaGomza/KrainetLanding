@@ -1,7 +1,7 @@
 import { initBurgerMenu } from './components/burgerMenu.js';
 import { renderPrograms } from './components/programs.js';
 import { renderOverview } from './components/overview.js';
-import { renderExample } from './components/example.js';
+import { renderAchievementCards, renderAdaptiveInput } from './components/example.js';
 import { renderMap } from './components/address.js';
 import { renderFooter } from './components/footer.js';
 import { logo } from './svg/logo.js';
@@ -12,7 +12,8 @@ const primaryColor = 'black';
 initBurgerMenu();
 renderPrograms(primaryColor);
 renderOverview();
-renderExample();
+renderAchievementCards();
+renderAdaptiveInput();
 renderMap();
 renderFooter();
 
@@ -31,4 +32,8 @@ window.addEventListener('scroll', () => {
     header.classList.remove('scrolled');
     headerLink.forEach((el) => el.classList.remove('scrolled'));
   }
+});
+
+window.addEventListener('resize', () => {
+    renderAdaptiveInput();
 });

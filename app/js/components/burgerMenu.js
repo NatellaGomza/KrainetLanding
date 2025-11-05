@@ -7,10 +7,12 @@ export function initBurgerMenu() {
     navList.classList.toggle('active');
   });
 
-  document.addEventListener('click', (e) => {
-    if (!navList.contains(e.target) && !burger.contains(e.target)) {
-      burger.classList.toggle('active');
-      navList.classList.toggle('active');
-    }
-  });
+    document.addEventListener('click', (e) => {
+        const isClickInsideMenu = navList.contains(e.target) || burger.contains(e.target);
+
+        if (!isClickInsideMenu) {
+            burger.classList.remove('active');
+            navList.classList.remove('active');
+        }
+    });
 }

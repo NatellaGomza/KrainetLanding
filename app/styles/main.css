@@ -47,10 +47,6 @@
     padding: 50px 110px 20px;
   }
 }
-.header__logo {
-  font-size: 1.5rem;
-  font-weight: bold;
-}
 .header__nav {
   position: relative;
 }
@@ -120,13 +116,14 @@
   right: 0;
   background-color: #68b738;
   flex-direction: column;
-  gap: 1rem;
-  padding: 1rem;
+  gap: 10px;
+  padding: 10px;
   display: none;
   list-style: none;
 }
 .nav__list.active {
   display: flex;
+  width: 150px;
 }
 .nav__list li a {
   text-transform: uppercase;
@@ -145,7 +142,7 @@
     display: flex;
     flex-direction: row;
     position: relative;
-    gap: 1.5rem;
+    gap: 10px;
     background: transparent;
   }
   .nav__list li a {
@@ -485,143 +482,6 @@
   }
 }
 
-.main-example {
-  margin: 0 20px 20px;
-}
-@media (width >= 1440px) {
-  .main-example {
-    padding: 0 110px;
-  }
-}
-@media (width >= 1440px) {
-  .main-example__content {
-    display: flex;
-  }
-}
-.main-example__title {
-  font-size: 36px;
-  margin-bottom: 30px;
-}
-@media (width >= 768px) {
-  .main-example__title {
-    font-size: 60px;
-  }
-}
-@media (width >= 1440px) {
-  .main-example__info {
-    flex-basis: 31%;
-  }
-}
-.main-example__progress-summary {
-  font-family: "Arial", sans-serif;
-  padding: 0 10px 25px 0;
-}
-@media (width >= 768px) {
-  .main-example__progress-summary {
-    font-size: 16px;
-    padding: 0 55px 25px 0;
-  }
-}
-@media (width >= 1440px) {
-  .main-example__progress-summary {
-    padding: 100px 10px 70px;
-  }
-}
-.main-example__achievement-wrapper {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
-}
-@media (width >= 1440px) {
-  .main-example__achievement-wrapper {
-    flex-direction: column;
-    width: 90%;
-  }
-}
-.main-example__achievement-group {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
-  flex-basis: 100%;
-}
-@media (width >= 768px) {
-  .main-example__achievement-group {
-    flex-basis: 50%;
-  }
-}
-.main-example__achievement-card-wrapper {
-  flex-basis: 45%;
-  max-width: 124px;
-}
-@media (width >= 768px) {
-  .main-example__achievement-card-wrapper {
-    max-width: 162px;
-  }
-}
-.main-example__achievement-card-border {
-  border-radius: 4px;
-  border: 1px solid #CDCDCD;
-  padding: 27px 0;
-}
-@media (width >= 768px) {
-  .main-example__achievement-card-border {
-    padding: 37px 0;
-  }
-}
-.main-example__achievement-card {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  background-color: white;
-  width: 65%;
-  margin: -50px auto 0;
-}
-@media (width >= 768px) {
-  .main-example__achievement-card {
-    width: fit-content;
-    padding: 0 5px;
-    margin: -55px auto 0;
-  }
-}
-.main-example__achievement-card-title {
-  font-size: 24px;
-}
-@media (width >= 768px) {
-  .main-example__achievement-card-title {
-    font-size: 30px;
-  }
-}
-.main-example__achievement-card-info {
-  text-align: center;
-  font-size: 12px;
-  font-family: "Arial", sans-serif;
-}
-@media (width >= 768px) {
-  .main-example__achievement-card-info {
-    font-size: 14px;
-  }
-}
-.main-example__achievement-info {
-  flex-basis: 100%;
-  text-align: center;
-  text-transform: uppercase;
-  margin: 15px 0 40px;
-}
-@media (width >= 768px) {
-  .main-example__achievement-info {
-    flex-basis: 20%;
-    text-align: right;
-    font-size: 16px;
-  }
-}
-@media (width >= 1440px) {
-  .main-example__achievement-info {
-    display: flex;
-    justify-content: space-between;
-    font-size: 20px;
-  }
-}
 @media (width >= 1440px) {
   .main-example__slider {
     flex-basis: 60%;
@@ -637,6 +497,30 @@
   height: 400px;
   overflow: hidden;
 }
+@media (width >= 768px) {
+  .main-example__image-wrapper {
+    height: 620px;
+  }
+}
+.main-example__input-wrapper {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 16px;
+  margin-top: 40px;
+  text-transform: uppercase;
+}
+@media (width >= 768px) {
+  .main-example__input-wrapper span {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+  }
+}
+@media (width >= 768px) {
+  .main-example__input-wrapper {
+    font-size: 20px;
+    margin: 40px auto 60px;
+  }
+}
 .main-example__image {
   position: absolute;
   top: 0;
@@ -646,17 +530,32 @@
   object-fit: cover;
 }
 .main-example__image--before {
+  background-color: #EAEAEA;
   z-index: 1;
 }
+@media (width >= 768px) {
+  .main-example__image--before {
+    background: linear-gradient(to top, #EAEAEA 311px, white 311px);
+  }
+}
 .main-example__image--after {
+  background-color: #EAEAEA;
   z-index: 2;
+}
+@media (width >= 768px) {
+  .main-example__image--after {
+    background: linear-gradient(to top, #EAEAEA 311px, white 311px);
+  }
 }
 .main-example__slider-input {
   appearance: none;
   background: transparent;
   cursor: pointer;
-  width: 100%;
-  margin-top: 20px;
+}
+@media (width >= 768px) {
+  .main-example__slider-input {
+    width: 428px;
+  }
 }
 .main-example__slider-input::-webkit-slider-runnable-track {
   background: #ccc;
@@ -688,10 +587,198 @@
   position: absolute;
   top: 0;
   bottom: 0;
-  width: 4px;
-  background: rgba(255, 255, 255, 0.9);
+  background: #EAEAEA;
   z-index: 3;
   pointer-events: none;
+}
+
+.main-example__progress-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 12px;
+  width: 100%;
+  max-width: 300px;
+  margin: 24px auto;
+  cursor: pointer;
+}
+.main-example__progress-toggle .main-example__toggle-label {
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+}
+.main-example__progress-toggle .main-example__toggle-bar {
+  position: relative;
+  height: 14px;
+  width: 84px;
+  border: 4px solid white;
+  border-radius: 6px;
+  background-color: white;
+  overflow: hidden;
+}
+.main-example__progress-toggle .main-example__toggle-fill {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 50%;
+  background-color: #4caf50;
+  transition: left 0.3s ease;
+  border-radius: 6px;
+}
+.main-example__progress-toggle[data-state=after] .main-example__toggle-fill {
+  left: 50%;
+}
+
+.main-example {
+  padding: 20px;
+  background-color: #EAEAEA;
+}
+@media (width >= 768px) {
+  .main-example {
+    background: linear-gradient(to top, #EAEAEA 462px, white 462px);
+  }
+}
+@media (width >= 1440px) {
+  .main-example {
+    padding: 0 110px;
+  }
+}
+@media (width >= 1440px) {
+  .main-example__content {
+    display: flex;
+  }
+}
+.main-example__info {
+  margin-bottom: 60px;
+}
+.main-example__title {
+  font-size: 36px;
+  margin-bottom: 30px;
+}
+@media (width >= 768px) {
+  .main-example__title {
+    font-size: 60px;
+    margin-bottom: 60px;
+  }
+}
+@media (width >= 1440px) {
+  .main-example__info {
+    flex-basis: 31%;
+  }
+}
+.main-example__progress-summary {
+  font-family: "Arial", sans-serif;
+  padding: 0 10px 25px 0;
+}
+@media (width >= 768px) {
+  .main-example__progress-summary {
+    font-size: 16px;
+    padding: 0 55px 55px 0;
+  }
+}
+@media (width >= 1440px) {
+  .main-example__progress-summary {
+    padding: 100px 10px 70px;
+  }
+}
+.main-example__achievement-wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+@media (width >= 1440px) {
+  .main-example__achievement-wrapper {
+    flex-direction: column;
+    width: 90%;
+  }
+}
+.main-example__achievement-group {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  flex-basis: 100%;
+}
+@media (width >= 768px) {
+  .main-example__achievement-group {
+    flex-basis: 50%;
+    align-items: center;
+  }
+}
+.main-example__achievement-card-wrapper {
+  flex-basis: 45%;
+  max-width: 124px;
+}
+@media (width >= 768px) {
+  .main-example__achievement-card-wrapper {
+    max-width: 162px;
+  }
+}
+.main-example__achievement-card-border {
+  border-radius: 4px;
+  border: 1px solid #CDCDCD;
+  padding: 27px 0;
+}
+@media (width >= 768px) {
+  .main-example__achievement-card-border {
+    padding: 37px 0;
+  }
+}
+.main-example__achievement-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #EAEAEA;
+  width: 65%;
+  margin: -50px auto 0;
+}
+@media (width >= 768px) {
+  .main-example__achievement-card {
+    width: fit-content;
+    padding: 0 5px;
+    margin: -55px auto 0;
+    background-color: white;
+  }
+}
+.main-example__achievement-card-title {
+  font-size: 24px;
+}
+@media (width >= 768px) {
+  .main-example__achievement-card-title {
+    font-size: 30px;
+  }
+}
+.main-example__achievement-card-info {
+  text-align: center;
+  font-size: 12px;
+  font-family: "Arial", sans-serif;
+}
+@media (width >= 768px) {
+  .main-example__achievement-card-info {
+    font-size: 14px;
+  }
+}
+.main-example__achievement-info {
+  flex-basis: 100%;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 15px 0 40px;
+}
+@media (width >= 768px) {
+  .main-example__achievement-info {
+    flex-basis: 25%;
+    text-align: right;
+    font-size: 20px;
+    margin: 0;
+  }
+}
+@media (width >= 1440px) {
+  .main-example__achievement-info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+  }
 }
 
 #map {
@@ -712,7 +799,7 @@
 }
 @media (width >= 768px) {
   .main-address__content {
-    margin: 20px 50px;
+    margin: 60px 50px 50px;
     font-size: 16px;
     text-align: end;
     grid-template: "K empty empty L" 1fr "K empty empty M" 1fr "K empty empty space" 1fr "K empty empty N" 1fr/1fr 1fr 1fr 1fr;

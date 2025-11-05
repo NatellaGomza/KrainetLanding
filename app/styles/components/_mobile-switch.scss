@@ -1,0 +1,41 @@
+.main-example__progress-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 12px;
+  width: 100%;
+  max-width: 300px;
+  margin: 24px auto;
+  cursor: pointer;
+
+  .main-example__toggle-label {
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+  }
+
+  .main-example__toggle-bar {
+    position: relative;
+    height: 14px;
+    width: 84px;
+    border: 4px solid white;
+    border-radius: 6px;
+    background-color: white;
+    overflow: hidden;
+  }
+
+  .main-example__toggle-fill {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 50%;
+    background-color: #4caf50;
+    transition: left 0.3s ease;
+    border-radius: 6px;
+  }
+
+  &[data-state='after'] .main-example__toggle-fill {
+    left: 50%;
+  }
+}
