@@ -27,7 +27,7 @@
   }
 
   @media (width >= 1440px) {
-    background: url("../../../app/assets/index-background-desktop.png") no-repeat;
+    background: url("./../../../app/assets/index-background-desktop.png") no-repeat;
     background-position: right;
     padding-top: 140px;
     padding-left: calc(50px + #{variables.$sectionPadding});
