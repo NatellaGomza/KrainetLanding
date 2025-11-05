@@ -231,6 +231,8 @@
   text-transform: uppercase;
   margin: 20px;
   grid-area: D;
+  border: none;
+  font-family: "Oswald", sans-serif;
 }
 @media (width >= 768px) {
   .main-banner__button {
@@ -395,6 +397,11 @@
 .main-overview__title {
   font-size: 36px;
   margin-bottom: 30px;
+}
+@media (width >= 768px) {
+  .main-overview__title {
+    font-size: 60px;
+  }
 }
 .main-overview__content {
   display: flex;
@@ -706,7 +713,7 @@
 }
 @media (width >= 1440px) {
   .main-example__progress-summary {
-    padding: 70px 0 70px;
+    padding: 70px 0;
   }
 }
 .main-example__achievement-wrapper {

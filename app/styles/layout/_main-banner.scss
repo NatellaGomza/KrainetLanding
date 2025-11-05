@@ -1,5 +1,6 @@
 @use '../base/variables';
 @use '../base/mixins';
+@use '../base/fonts';
 
 // === Main Banner ===
 .main-banner {
@@ -46,7 +47,7 @@
     line-height: 36px;
 
     @media (width >= 768px) {
-      font-size: 60px;
+      font-size: variables.$desktopTitleFontSize;
       text-align: left;
       line-height: 60px;
       width: 500px;
@@ -77,6 +78,8 @@
     text-transform: uppercase;
     margin: 20px;
     grid-area: D;
+    border: none;
+    font-family: fonts.$font-main;
 
     @media (width >= 768px) {
       font-size: 20px;

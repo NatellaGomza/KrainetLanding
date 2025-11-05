@@ -24,6 +24,10 @@
   &__title {
     font-size: variables.$mobTitleFontSize;
     margin-bottom: 30px;
+
+    @media (width >= 768px) {
+      font-size: variables.$desktopTitleFontSize;
+    }
   }
 
   &__content {

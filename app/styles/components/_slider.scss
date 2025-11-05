@@ -38,9 +38,10 @@
 
     span {
       @media (width >= 768px) {
-        border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+        border-bottom: 1px solid rgb(0 0 0 / 40%);
       }
     }
+
     @media (width >= 768px) {
       font-size: 20px;
       margin: 40px auto 60px;
@@ -58,6 +59,7 @@
     &--before {
       background-color: variables.$sliderBackground;
       z-index: 1;
+
       @media (width >= 768px) {
         background: linear-gradient(to top, variables.$sliderBackground 311px, white 311px);
       }
@@ -70,6 +72,7 @@
     &--after {
       background-color: variables.$sliderBackground;
       z-index: 2;
+
       @media (width >= 768px) {
         background: linear-gradient(to top, variables.$sliderBackground 311px, white 311px);
       }
@@ -124,7 +127,8 @@
     position: absolute;
     top: 0;
     bottom: 0;
-    //width: 4px;
+
+    // width: 4px;
     background: variables.$sliderBackground;
     z-index: 3;
     pointer-events: none;

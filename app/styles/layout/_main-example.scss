@@ -38,7 +38,7 @@
     margin-bottom: 30px;
 
     @media (width >= 768px) {
-      font-size: 60px;
+      font-size: variables.$desktopTitleFontSize;
       margin-bottom: 60px;
     }
 
@@ -57,7 +57,7 @@
     }
 
     @media (width >= 1440px) {
-      padding: 70px 0 70px
+      padding: 70px 0
     }
   }
 
