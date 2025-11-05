@@ -1,11 +1,9 @@
 // components/address.js
 export function renderMap() {
-  console.log('ggg');
   ymaps.ready(() => {
     const mapContainer = document.getElementById('map');
-    console.log(mapContainer);
+
     if (!mapContainer) return;
-    console.log('here');
 
     const map = new ymaps.Map('map', {
       center: [59.939095, 30.315868],

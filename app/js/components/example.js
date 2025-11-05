@@ -50,7 +50,6 @@ function resetImageState(state = 'before') {
     if (state === 'before') {
         overlay.style.left = '0%';
         afterImg.style.clipPath = 'inset(0 100% 0 0)';
-        console.log('here')
     } else {
         overlay.style.left = '100%';
         afterImg.style.clipPath = 'inset(0 0% 0 0)';
@@ -118,7 +117,6 @@ function initializeSlider() {
         const clampedX = ratio * imgRect.width;
 
         overlay.style.left = `${clampedX}px`;
-        console.log(2)
 
         const clipPercent = (clampedX / imgRect.width) * 100;
         afterImg.style.clipPath = `inset(0 ${100 - clipPercent}% 0 0)`;
@@ -145,7 +143,6 @@ export function renderAchievementCards() {
     const exampleSection = document.querySelector('.main-example__achievement-group');
 
     if (!exampleSection) {
-        console.error('Контейнер для карточек не найден.');
         return;
     }
 
