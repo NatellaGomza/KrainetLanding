@@ -9,22 +9,28 @@
   background-color: variables.$sliderBackground;
 
   @media (width >= 768px) {
-    background: linear-gradient( to top, variables.$sliderBackground 462px, white 462px );
+    background: linear-gradient(to top, variables.$sliderBackground 462px, white 462px);
   }
 
   @media (width >= 1440px) {
-
     padding: 0 variables.$sectionPadding;
   }
 
   &__content {
     @media (width >= 1440px) {
       display: flex;
+      justify-content: space-between;
     }
   }
 
   &__info {
     margin-bottom: 60px;
+
+    @media (width >= 1440px) {
+      flex-basis: 40%;
+      max-width: 427px;
+      margin-bottom: 0;
+    }
   }
 
   &__title {
@@ -35,11 +41,9 @@
       font-size: 60px;
       margin-bottom: 60px;
     }
-  }
 
-  &__info {
     @media (width >= 1440px) {
-      flex-basis: 31%;
+      margin-top: 60px;
     }
   }
 
@@ -53,7 +57,7 @@
     }
 
     @media (width >= 1440px) {
-      padding: 100px 10px 70px
+      padding: 70px 0 70px
     }
   }
 
@@ -114,6 +118,10 @@
       background-color: white;
     }
 
+    @media (width >= 1440px) {
+      background-color: variables.$sliderBackground;
+    }
+
     &-title {
       font-size: 24px;
 
@@ -150,6 +158,14 @@
       display: flex;
       justify-content: space-between;
       font-size: 20px;
+      margin-top: 55px;
+    }
+
+    span:last-of-type {
+      @media (width >= 1440px) {
+        flex-basis: 42%;
+        text-align: center;
+      }
     }
   }
 }

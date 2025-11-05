@@ -14,7 +14,6 @@ export function renderAdaptiveInput() {
     const wrapper = document.getElementById('inputWrapper');
     if (!wrapper) return;
 
-    resetImageState('before');
     const isMobile = window.innerWidth <= 768;
 
     if (isMobile) {
@@ -29,6 +28,7 @@ export function renderAdaptiveInput() {
 
   `;
         initializeMobileSwitch();
+        resetImageState();
     } else {
         wrapper.innerHTML = `
     <span>Было</span>
@@ -50,6 +50,7 @@ function resetImageState(state = 'before') {
     if (state === 'before') {
         overlay.style.left = '0%';
         afterImg.style.clipPath = 'inset(0 100% 0 0)';
+        console.log('here')
     } else {
         overlay.style.left = '100%';
         afterImg.style.clipPath = 'inset(0 0% 0 0)';
@@ -117,6 +118,7 @@ function initializeSlider() {
         const clampedX = ratio * imgRect.width;
 
         overlay.style.left = `${clampedX}px`;
+        console.log(2)
 
         const clipPercent = (clampedX / imgRect.width) * 100;
         afterImg.style.clipPath = `inset(0 ${100 - clipPercent}% 0 0)`;
@@ -124,7 +126,6 @@ function initializeSlider() {
 
 
     slider.addEventListener('input', updateVisuals);
-    window.addEventListener('resize', updateVisuals);
 
     const images = imageWrapper.querySelectorAll('img');
     let loaded = 0;

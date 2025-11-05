@@ -123,7 +123,10 @@
 }
 .nav__list.active {
   display: flex;
-  width: 150px;
+  width: 320px;
+  top: 50px;
+  right: -20px;
+  opacity: 0.8;
 }
 .nav__list li a {
   text-transform: uppercase;
@@ -158,6 +161,7 @@
   .nav__list li a {
     color: white;
     font-size: 20px;
+    gap: 30px;
   }
 }
 
@@ -502,6 +506,11 @@
     height: 620px;
   }
 }
+@media (width >= 1440px) {
+  .main-example__image-wrapper {
+    height: 536px;
+  }
+}
 .main-example__input-wrapper {
   display: flex;
   justify-content: space-evenly;
@@ -538,6 +547,11 @@
     background: linear-gradient(to top, #EAEAEA 311px, white 311px);
   }
 }
+@media (width >= 1440px) {
+  .main-example__image--before {
+    background: linear-gradient(to top, #EAEAEA 331px, white 331px);
+  }
+}
 .main-example__image--after {
   background-color: #EAEAEA;
   z-index: 2;
@@ -545,6 +559,11 @@
 @media (width >= 768px) {
   .main-example__image--after {
     background: linear-gradient(to top, #EAEAEA 311px, white 311px);
+  }
+}
+@media (width >= 1440px) {
+  .main-example__image--after {
+    background: linear-gradient(to top, #EAEAEA 331px, white 331px);
   }
 }
 .main-example__slider-input {
@@ -647,10 +666,18 @@
 @media (width >= 1440px) {
   .main-example__content {
     display: flex;
+    justify-content: space-between;
   }
 }
 .main-example__info {
   margin-bottom: 60px;
+}
+@media (width >= 1440px) {
+  .main-example__info {
+    flex-basis: 40%;
+    max-width: 427px;
+    margin-bottom: 0;
+  }
 }
 .main-example__title {
   font-size: 36px;
@@ -663,8 +690,8 @@
   }
 }
 @media (width >= 1440px) {
-  .main-example__info {
-    flex-basis: 31%;
+  .main-example__title {
+    margin-top: 60px;
   }
 }
 .main-example__progress-summary {
@@ -679,7 +706,7 @@
 }
 @media (width >= 1440px) {
   .main-example__progress-summary {
-    padding: 100px 10px 70px;
+    padding: 70px 0 70px;
   }
 }
 .main-example__achievement-wrapper {
@@ -741,6 +768,11 @@
     background-color: white;
   }
 }
+@media (width >= 1440px) {
+  .main-example__achievement-card {
+    background-color: #EAEAEA;
+  }
+}
 .main-example__achievement-card-title {
   font-size: 24px;
 }
@@ -778,6 +810,13 @@
     display: flex;
     justify-content: space-between;
     font-size: 20px;
+    margin-top: 55px;
+  }
+}
+@media (width >= 1440px) {
+  .main-example__achievement-info span:last-of-type {
+    flex-basis: 42%;
+    text-align: center;
   }
 }
 
