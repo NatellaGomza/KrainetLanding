@@ -45,13 +45,23 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    span {
+      cursor: pointer;
+    }
   }
 
   &__html-academy {
     width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+
+    a {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      text-decoration: none;
+      color: #444;
+    }
 
     span:first-of-type {
       margin-right: 20px;
