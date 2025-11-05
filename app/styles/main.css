@@ -628,8 +628,7 @@
   }
 }
 .main-example__slider-container {
-  display: none;
-  width: 600px;
+  width: 100%;
   margin: 0 auto;
 }
 .main-example__image-wrapper {
@@ -653,8 +652,6 @@
   z-index: 2;
 }
 .main-example__slider-input {
-  appearance: none;
-  appearance: none;
   appearance: none;
   background: transparent;
   cursor: pointer;

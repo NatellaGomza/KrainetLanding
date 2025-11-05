@@ -1,5 +1,5 @@
-export function iconAlarm (color = "white") {
-    return `<svg width="25" height="30" viewBox="0 0 25 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+export function iconAlarm(color = 'white') {
+  return `<svg width="25" height="30" viewBox="0 0 25 30" fill="none" xmlns="http://www.w3.org/2000/svg">
 <ellipse cx="17.6685" cy="9.32975" rx="1.0873" ry="1.08512" fill="white"/>
 <ellipse cx="6.7955" cy="9.32975" rx="1.08731" ry="1.08512" fill="white"/>
 <ellipse cx="6.7955" cy="22.3512" rx="1.08731" ry="1.08512" fill="white"/>
@@ -15,5 +15,5 @@ export function iconAlarm (color = "white") {
 <rect x="11.4644" y="4" width="4" height="1.5" transform="rotate(-90 11.4644 4)" fill="white"/>
 <rect x="4.46436" width="15.5" height="1.5" rx="0.75" fill="white"/>
 </svg>
-`
+`;
 }
