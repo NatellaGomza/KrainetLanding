@@ -892,24 +892,28 @@
 }
 
 .main-footer {
-  margin: 50px 30px;
+  padding: 50px 30px;
+  color: #444;
+  font-size: 16px;
+  font-family: "Arial", sans-serif;
+  background-color: #F2F2F2;
+}
+.main-footer__wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  color: #444;
-  font-size: 16px;
-  font-family: "Arial", sans-serif;
 }
 @media (width >= 768px) {
-  .main-footer {
+  .main-footer__wrapper {
     flex-direction: row;
     justify-content: space-between;
   }
 }
 @media (width >= 1440px) {
-  .main-footer {
+  .main-footer__wrapper {
     padding: 0 110px;
+    width: 100%;
   }
 }
 .main-footer__divider {

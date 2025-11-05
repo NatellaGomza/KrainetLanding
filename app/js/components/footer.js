@@ -5,7 +5,7 @@ import { iconFacebook } from '../svg/footer/iconFB.js';
 import { iconVk } from '../svg/footer/iconVk.js';
 export function renderFooter() {
   const icons = [iconVk, iconInst, iconFacebook];
-  const footerSection = document.getElementById('footer');
+  const footerSection = document.getElementById('footerWrapper');
 
   const iconsHTML = icons.map((el) => `<span>${el()}</span>`).join('');
 
