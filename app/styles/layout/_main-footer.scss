@@ -12,22 +12,25 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  color: #444444;
+  color: #444;
   font-size: 16px;
   font-family: fonts.$font-secondary;
-  @media (min-width: 768px) {
+
+  @media (width >= 768px) {
     flex-direction: row;
     justify-content: space-between;
   }
-  @media (min-width: 1440px) {
+
+  @media (width >= 1440px) {
     padding: 0 variables.$sectionPadding;
   }
 
   &__divider {
     @include mixins.main-divider;
+
     margin: 20px auto;
 
-    @media (min-width: 768px) {
+    @media (width >= 768px) {
       display: none;
     }
   }
@@ -49,7 +52,7 @@
       margin-right: 20px;
     }
 
-    @media (min-width: 768px) {
+    @media (width >= 768px) {
       width: fit-content;
     }
   }

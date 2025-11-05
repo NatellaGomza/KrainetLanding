@@ -14,18 +14,18 @@
     grid-template-columns: 1fr 1fr;
     grid-template-areas: "K L" "K M" "K N";
     font-size: 14px;
-    color: #444444;
+    color: #444;
     font-family: fonts.$font-secondary;
     margin: 20px;
-    @media (min-width: 768px) {
+
+    @media (width >= 768px) {
       margin: 20px 50px;
       font-size: 16px;
       text-align: end;
-      grid-template-columns: 1fr 1fr 1fr 1fr;
-      grid-template-rows: 1fr 1fr 1fr 1fr;
-      grid-template-areas: "K empty empty L" "K empty empty M" "K empty empty space" "K empty empty N";
+      grid-template: "K empty empty L" 1fr "K empty empty M" 1fr "K empty empty space" 1fr "K empty empty N" 1fr / 1fr 1fr 1fr 1fr;
     }
-    @media (min-width: 1440px) {
+
+    @media (width >= 1440px) {
       position: absolute;
       z-index: 20;
       top: 70px;
@@ -60,7 +60,7 @@
     grid-area: K;
     text-align: start;
 
-    @media (min-width: 768px) {
+    @media (width >= 768px) {
       font-size: 20px;
     }
   }

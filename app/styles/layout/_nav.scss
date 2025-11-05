@@ -10,7 +10,7 @@
     position: relative;
     z-index: 3;
 
-    @media (min-width: 768px) {
+    @media (width >= 768px) {
       display: none;
     }
 
@@ -101,7 +101,7 @@
       }
     }
 
-    @media (min-width: 768px) {
+    @media (width >= 768px) {
       display: flex;
       flex-direction: row;
       position: relative;
@@ -119,7 +119,7 @@
       }
     }
 
-    @media (min-width: 1440px) {
+    @media (width >= 1440px) {
       li a {
         color: white;
         font-size: 20px;

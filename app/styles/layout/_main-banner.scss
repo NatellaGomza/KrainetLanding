@@ -1,5 +1,6 @@
 @use '../base/variables';
 @use '../base/mixins';
+
 // === Main Banner ===
 .main-banner {
   background: url("../../assets/index-background-mobile.png") no-repeat;
@@ -13,7 +14,7 @@
     "C"
     "D";
 
-  @media (min-width: 768px) {
+  @media (width >= 768px) {
     background: white;
     color: variables.$desktopMainBannerColor;
     padding: 160px 50px 50px 110px;
@@ -24,7 +25,7 @@
       "C";
   }
 
-  @media (min-width: 1440px) {
+  @media (width >= 1440px) {
     background: url("../../assets/index-background-desktop.png") no-repeat;
     background-position: right;
     padding-top: 140px;
@@ -44,14 +45,14 @@
     grid-area: A;
     line-height: 36px;
 
-    @media (min-width: 768px) {
+    @media (width >= 768px) {
       font-size: 60px;
       text-align: left;
       line-height: 60px;
       width: 500px;
     }
 
-    @media (min-width: 1440px) {
+    @media (width >= 1440px) {
       width: auto;
     }
   }
@@ -62,7 +63,7 @@
     margin: 25px 0;
     grid-area: B;
 
-    @media (min-width: 768px) {
+    @media (width >= 768px) {
       font-size: 20px;
       text-align: left;
     }
@@ -70,13 +71,14 @@
 
   &__button {
     @include mixins.flex-center;
+
     background-color: variables.$primaryBgColor;
     padding: 10px;
     text-transform: uppercase;
     margin: 20px;
     grid-area: D;
 
-    @media (min-width: 768px) {
+    @media (width >= 768px) {
       font-size: 20px;
       color: white;
       width: 244px;
@@ -88,13 +90,13 @@
     height: 280px;
     grid-area: C;
 
-    @media (min-width: 768px) {
+    @media (width >= 768px) {
       height: 609px;
       margin-top: -100px;
       margin-left: -30px;
     }
 
-    @media (min-width: 1440px) {
+    @media (width >= 1440px) {
       height: 499px;
       margin-top: 0;
     }

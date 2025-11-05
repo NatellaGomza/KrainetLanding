@@ -16,17 +16,17 @@
   background-color: white;
 
   &.scrolled {
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgb(255 255 255 / 80%);
   }
 
-  @media (min-width: 768px) {
+  @media (width >= 768px) {
     width: 768px;
     padding: 30px;
     transition: background-color 0.3s ease;
     background-color: transparent;
   }
 
-  @media (min-width: 1440px) {
+  @media (width >= 1440px) {
     width: 1440px;
     padding: 50px variables.$sectionPadding 20px;
   }

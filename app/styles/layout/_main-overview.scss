@@ -5,17 +5,17 @@
 .main-overview {
   margin: 0 20px 20px;
 
-  @media (min-width: 768px) {
+  @media (width >= 768px) {
     margin: 0 30px 20px;
   }
 
-  @media (min-width: 1440px) {
+  @media (width >= 1440px) {
     margin: 0 0 20px;
     padding: 0 variables.$sectionPadding;
   }
 
   .break-line::before {
-    @media (min-width: 768px) {
+    @media (width >= 768px) {
       content: "\A";
       white-space: pre-line;
     }
@@ -28,22 +28,21 @@
 
   &__content {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-flow: row wrap;
     justify-content: space-between;
 
-    @media (min-width: 768px) {
+    @media (width >= 768px) {
       align-items: flex-start;
       margin: 0 10px 20px 0;
     }
   }
 
   &__item-wrapper {
-    @media (min-width: 768px) {
+    @media (width >= 768px) {
       flex-basis: 50%;
     }
 
-    @media (min-width: 1440px) {
+    @media (width >= 1440px) {
       flex-basis: 18%;
     }
   }
@@ -54,12 +53,12 @@
     position: relative;
     align-items: center;
 
-    @media (min-width: 768px) {
+    @media (width >= 768px) {
       justify-content: flex-end;
       width: 70%;
     }
 
-    @media (min-width: 1440px) {
+    @media (width >= 1440px) {
       width: 100%;
     }
   }
@@ -70,7 +69,7 @@
     align-items: center;
     width: 100%;
 
-    @media (min-width: 768px) {
+    @media (width >= 768px) {
       position: absolute;
       flex-direction: column;
       align-items: flex-start;
@@ -81,11 +80,12 @@
 
   &__image {
     @include mixins.flex-center;
+
     min-width: 60px;
     height: 60px;
     background-color: variables.$primaryBgColor;
 
-    @media (min-width: 768px) {
+    @media (width >= 768px) {
       width: 80px;
       height: 80px;
       margin-bottom: 30px;
@@ -96,7 +96,7 @@
     font-family: fonts.$font-secondary;
     margin-left: 20px;
 
-    @media (min-width: 768px) {
+    @media (width >= 768px) {
       margin-left: 0;
       font-size: 16px;
     }
@@ -108,7 +108,7 @@
     line-height: 280px;
     color: variables.$basicGrey;
 
-    @media (min-width: 768px) {
+    @media (width >= 768px) {
       display: block;
     }
   }

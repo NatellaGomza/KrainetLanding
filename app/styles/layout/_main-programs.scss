@@ -1,15 +1,15 @@
 @use '../base/variables';
 @use '../base/mixins';
 @use '../base/fonts';
+
 // === Main Programs ===
 
 .main-programs {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  flex-flow: row wrap;
   justify-content: space-between;
 
-  @media (min-width: 1440px) {
+  @media (width >= 1440px) {
     padding: 0 variables.$sectionPadding;
   }
 
@@ -25,14 +25,14 @@
             "E F F"
             "G G G";
 
-    @media (min-width: 768px) {
+    @media (width >= 768px) {
       padding: 80px 60px 50px 50px;
       grid-template-areas:
               "F F E"
               "G G E";
     }
 
-    @media (min-width: 1440px) {
+    @media (width >= 1440px) {
       flex-basis: 48%;
       margin: 22px 0;
       grid-template-areas:
@@ -43,6 +43,7 @@
 
   &__image-wrapper {
     @include mixins.flex-center;
+
     width: 50px;
     height: 50px;
     border-radius: 50%;
@@ -54,12 +55,12 @@
       width: 100%;
     }
 
-    @media (min-width: 768px) {
+    @media (width >= 768px) {
       width: 200px;
       height: 200px;
     }
 
-    @media (min-width: 1440px) {
+    @media (width >= 1440px) {
       width: 100px;
       height: 100px;
     }
@@ -70,7 +71,7 @@
     grid-area: F;
     font-size: 24px;
 
-    @media (min-width: 768px) {
+    @media (width >= 768px) {
       font-size: 30px;
     }
   }
@@ -83,12 +84,12 @@
     padding: 20px 0;
     grid-area: G;
 
-    @media (min-width: 768px) {
+    @media (width >= 768px) {
       padding: 20px 50px 0 0;
       font-size: 16px;
     }
 
-    @media (min-width: 1440px) {
+    @media (width >= 1440px) {
       padding: 20px 0 0;
       font-size: 16px;
     }
@@ -96,15 +97,16 @@
 
   &__divider {
     @include mixins.main-divider;
+
     margin: 15px 0;
 
-    @media (min-width: 768px) {
+    @media (width >= 768px) {
       display: none;
     }
   }
 
   &__button {
-    @media (min-width: 768px) {
+    @media (width >= 768px) {
       margin-top: 30px;
     }
 
@@ -113,7 +115,7 @@
       margin-right: 15px;
       font-size: 16px;
 
-      @media (min-width: 768px) {
+      @media (width >= 768px) {
         font-size: 20px;
       }
     }

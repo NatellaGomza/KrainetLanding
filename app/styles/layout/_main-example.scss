@@ -5,12 +5,12 @@
 .main-example {
   margin: 0 20px 20px;
 
-  @media (min-width: 1440px) {
+  @media (width >= 1440px) {
     padding: 0 variables.$sectionPadding;
   }
 
   &__content {
-    @media (min-width: 1440px) {
+    @media (width >= 1440px) {
       display: flex;
     }
   }
@@ -19,13 +19,13 @@
     font-size: variables.$mobTitleFontSize;
     margin-bottom: 30px;
 
-    @media (min-width: 768px) {
+    @media (width >= 768px) {
       font-size: 60px;
     }
   }
 
   &__info {
-    @media (min-width: 1440px) {
+    @media (width >= 1440px) {
       flex-basis: 31%;
     }
   }
@@ -34,23 +34,22 @@
     font-family: fonts.$font-secondary;
     padding: 0 10px 25px 0;
 
-    @media (min-width: 768px) {
+    @media (width >= 768px) {
       font-size: 16px;
       padding: 0 55px 25px 0;
     }
 
-    @media (min-width: 1440px) {
+    @media (width >= 1440px) {
       padding: 100px 10px 70px
     }
   }
 
   &__achievement-wrapper {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-flow: row wrap;
     justify-content: space-between;
 
-    @media (min-width: 1440px) {
+    @media (width >= 1440px) {
       flex-direction: column;
       width: 90%;
     }
@@ -58,12 +57,11 @@
 
   &__achievement-group {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-flow: row wrap;
     justify-content: space-between;
     flex-basis: 100%;
 
-    @media (min-width: 768px) {
+    @media (width >= 768px) {
       flex-basis: 50%;
     }
   }
@@ -71,7 +69,8 @@
   &__achievement-card-wrapper {
     flex-basis: 45%;
     max-width: 124px;
-    @media (min-width: 768px) {
+
+    @media (width >= 768px) {
       max-width: 162px;
     }
   }
@@ -81,19 +80,20 @@
     border: 1px solid #CDCDCD;
     padding: 27px 0;
 
-    @media (min-width: 768px) {
+    @media (width >= 768px) {
       padding: 37px 0;
     }
   }
 
   &__achievement-card {
     @include mixins.flex-center;
+
     flex-direction: column;
     background-color: white;
     width: 65%;
     margin: -50px auto 0;
 
-    @media (min-width: 768px) {
+    @media (width >= 768px) {
       width: fit-content;
       padding: 0 5px;
       margin: -55px auto 0;
@@ -102,7 +102,7 @@
     &-title {
       font-size: 24px;
 
-      @media (min-width: 768px) {
+      @media (width >= 768px) {
         font-size: 30px;
       }
     }
@@ -112,7 +112,7 @@
       font-size: 12px;
       font-family: fonts.$font-secondary;
 
-      @media (min-width: 768px) {
+      @media (width >= 768px) {
         font-size: 14px;
       }
     }
@@ -124,13 +124,13 @@
     text-transform: uppercase;
     margin: 15px 0 40px;
 
-    @media (min-width: 768px) {
+    @media (width >= 768px) {
       flex-basis: 20%;
       text-align: right;
       font-size: 16px;
     }
 
-    @media (min-width: 1440px) {
+    @media (width >= 1440px) {
       display: flex;
       justify-content: space-between;
       font-size: 20px;
@@ -138,7 +138,7 @@
   }
 
   &__slider {
-    @media (min-width: 1440px) {
+    @media (width >= 1440px) {
       flex-basis: 60%;
     }
   }
@@ -174,8 +174,8 @@
   }
 
   &__slider-input {
-    -webkit-appearance: none;
-    -moz-appearance: none;
+    appearance: none;
+    appearance: none;
     appearance: none;
     background: transparent;
     cursor: pointer;
@@ -195,7 +195,7 @@
     }
 
     &::-webkit-slider-thumb {
-      -webkit-appearance: none;
+      appearance: none;
       border: 10px solid white;
       background: variables.$primaryBgColor;
       width: 34px;
@@ -218,7 +218,7 @@
     top: 0;
     bottom: 0;
     width: 4px;
-    background: rgba(255, 255, 255, 0.9);
+    background: rgb(255 255 255 / 90%);
     z-index: 3;
     pointer-events: none;
   }
