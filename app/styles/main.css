@@ -656,6 +656,19 @@
   left: 50%;
 }
 
+.main-example__progress-toggle {
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+}
+
+.main-example__progress-toggle:focus {
+  outline: none;
+}
+
+.main-example__progress-toggle:active {
+  background-color: transparent;
+}
+
 .main-example {
   padding: 20px;
   background-color: #EAEAEA;
