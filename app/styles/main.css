@@ -114,7 +114,7 @@
   position: absolute;
   top: 100%;
   right: 0;
-  background-color: #68b738;
+  background-color: white;
   flex-direction: column;
   gap: 10px;
   padding: 10px;
@@ -232,6 +232,7 @@
   grid-area: D;
   border: none;
   font-family: "Oswald", sans-serif;
+  color: white;
 }
 @media (width >= 768px) {
   .main-banner__button {
