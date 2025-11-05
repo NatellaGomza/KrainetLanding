@@ -3,7 +3,7 @@
 
 // === Main Banner ===
 .main-banner {
-  background: url("../../assets/index-background-mobile.png") no-repeat;
+  background: url("../../../app/assets/index-background-mobile.png") no-repeat;
   color: variables.$mobileMainBannerColor;
   padding: 27px 0 0;
   display: grid;
@@ -26,7 +26,7 @@
   }
 
   @media (width >= 1440px) {
-    background: url("../../assets/index-background-desktop.png") no-repeat;
+    background: url("../../../app/assets/index-background-desktop.png") no-repeat;
     background-position: right;
     padding-top: 140px;
     padding-left: calc(50px + #{variables.$sectionPadding});

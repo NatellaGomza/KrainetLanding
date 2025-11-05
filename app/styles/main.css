@@ -1,13 +1,13 @@
 @font-face {
   font-family: Oswald;
-  src: url("../../fonts/Oswald/Oswald-Regular.ttf") format("truetype");
+  src: url("../../../app/fonts/Oswald/Oswald-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: Arial;
-  src: url("../../fonts/Arial/ArialMdm.ttf") format("truetype");
+  src: url("../../../app/fonts/Arial/ArialMdm.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -166,7 +166,7 @@
 }
 
 .main-banner {
-  background: url("../../assets/index-background-mobile.png") no-repeat;
+  background: url("../../../app/assets/index-background-mobile.png") no-repeat;
   color: white;
   padding: 27px 0 0;
   display: grid;
@@ -183,7 +183,7 @@
 }
 @media (width >= 1440px) {
   .main-banner {
-    background: url("../../assets/index-background-desktop.png") no-repeat;
+    background: url("../../../app/assets/index-background-desktop.png") no-repeat;
     background-position: right;
     padding-top: 140px;
     padding-left: calc(50px + 110px);
