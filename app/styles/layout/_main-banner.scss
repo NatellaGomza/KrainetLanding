@@ -4,6 +4,7 @@
 
 // === Main Banner ===
 .main-banner {
+  scroll-margin-top: 100px;
   background: url("#{variables.$assets-path}/index-background-mobile.png") no-repeat;
   color: variables.$mobileMainBannerColor;
   padding: 27px 0 0;
