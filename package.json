@@ -1,12 +1,17 @@
 {
   "devDependencies": {
+    "cssnano": "^7.1.2",
+    "postcss-cli": "^11.0.1",
     "prettier": "^3.6.2",
     "stylelint": "^16.25.0",
     "stylelint-config-standard-scss": "^16.0.0",
-    "stylelint-scss": "^6.12.1"
+    "stylelint-scss": "^6.12.1",
+    "terser": "^5.44.1"
   },
   "scripts": {
     "format": "prettier --write '**/*.{js,ts,jsx,tsx}'",
-    "lint:css": "stylelint '**/*.{css,scss}'"
+    "lint:css": "stylelint '**/*.{css,scss}'",
+    "build:css": "postcss app/styles/main.css -o app/styles/main.min.css",
+    "build:js": "terser app/js/main.js -o app/js/main.min.js --compress --mangle"
   }
 }
