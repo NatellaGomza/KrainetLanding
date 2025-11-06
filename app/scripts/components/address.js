@@ -1,4 +1,4 @@
-// components/address.js
+// components/address.scripts
 export function renderMap() {
   ymaps.ready(() => {
     const mapContainer = document.getElementById('map');

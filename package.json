@@ -9,9 +9,9 @@
     "terser": "^5.44.1"
   },
   "scripts": {
-    "format": "prettier --write '**/*.{js,ts,jsx,tsx}'",
-    "lint:css": "stylelint '**/*.{css,scss}'",
-    "build:css": "postcss app/styles/main.css -o app/styles/main.min.css",
-    "build:js": "terser app/js/main.js -o app/js/main.min.js --compress --mangle"
+    "format": "prettier \"app/scripts/**/*.js\" --config config/.prettierrc --write",
+    "lint:css": "stylelint \"app/styles/**/*.scss\" --config config/.stylelintrc.json",
+    "build:css": "postcss app/styles/main.css --config config/postcss.config.js -o app/styles/main.min.css",
+    "build:js": "terser app/scripts/main.js -o app/scripts/main.min.js --compress --mangle"
   }
 }

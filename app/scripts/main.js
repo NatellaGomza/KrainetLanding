@@ -35,5 +35,5 @@ window.addEventListener('scroll', () => {
 });
 
 window.addEventListener('resize', () => {
-    renderAdaptiveInput();
+  renderAdaptiveInput();
 });
